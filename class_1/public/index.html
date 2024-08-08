@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<style>
+    body{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+    .box{
+        background-color: red;
+        width: 200px;
+        height: 400px;
+    }
+    div{
+        width: 100%;
+        flex-grow: 1;
+        flex-shrink: 0;
+
+        width: fit-content;
+        padding: 4px 10px;
+        margin: 3px;
+
+
+    }
+    h1{
+        flex-grow: 1;
+        flex-shrink: 0;
+
+    }
+    table , td,th{
+
+        padding: 5px;
+        border: 1px solid black;
+        border-collapse: collapse;/* use to collapse the border of child with parent */
+    }
+    .anime-move{
+
+        transition-duration: 6s;
+        transition: all;
+        transform: translateY(100px);
+
+    }
+
+</style>
+<script async src="./index.js"></script>
+<script  src="./data.js"></script>
+<body>
+
+    <div >Hello World</div>
+
+    <div id = 'product-menu'>
+        <h3>List of Products</h3>
+        <table>
+            <thead>
+                <tr><th>
+                    Sr.no
+                </th>
+                <th>
+                    Product
+                </th>
+                <th>
+                   price
+                </th></tr>
+
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+    </div>
+
+    <div id = 'container'>
+
+    </div>
+
+</body>
+
+
+
+</html>
