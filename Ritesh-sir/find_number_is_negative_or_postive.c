@@ -2,6 +2,9 @@
 #include <stdio.h>
 #include <limits.h>
 #include <fcntl.h>
+int  better_solution(int number){
+   return (number>>31 )^!(!number);
+}
 int  find_n_is_negtive_positve_zero(int value ){
    int a = value;
    int b = (~a)+1;
@@ -19,13 +22,9 @@ int  find_n_is_negtive_positve_zero(int value ){
    return  n_s|p_s;
 }
 int main() {
-   int file = open("./copy.txt", O_WRONLY | O_TRUNC  );
-   write(file , " THa fdsfa" , 11 );
-   char arr[100];
-   size_t count = sizeof(arr)-1;
-   size_t res = read(file  , arr , count);
-   write(STDOUT_FILENO , arr , res);
-   close(file);
+   prinf("%d\n" , better_solution(10));
+   prinf("%d\n" , better_solution(0));
+   prinf("%d\n" , better_solution(-10));
 
     return 0;
 }
