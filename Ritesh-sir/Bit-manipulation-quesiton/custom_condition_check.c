@@ -1,14 +1,17 @@
 #include <stdio.h>
-int checkValue(int x, int y , int z){
-    int mask_1 = !x;
-    printf("%d\n" , mask_1);
-    return ((!mask_1)&y)^(mask_1&z);
+
+int ternary(int cond, int e1, int e2) {
+    int mask = -cond;
+    return (mask & e1) | (~mask & e2);
 }
-int main (){
-  int x = 1;
-  int y = 8;
-  int z = 10;
-  printf("x is present than ans is %d\n" ,checkValue(x ,y , z) );  
-  x = 0;
-  printf("x is not present than ans is %d\n" ,checkValue(x ,y , z) );   
+
+int main() {
+    int cond1 = 1;
+    int cond2 = 0;
+    int e1 = 20;
+    int e2 = 40;
+
+    printf("%d\n", ternary(cond1, e1, e2));
+    printf("%d\n", ternary(cond2, e1, e2));
+    return 0;  
 }
