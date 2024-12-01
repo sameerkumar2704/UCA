@@ -1,0 +1,1 @@
+to install to imp file to create database in that folder mongod --dbpath .
